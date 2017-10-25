@@ -1,0 +1,23 @@
+{
+  "name": "bower",
+  "description": "bower",
+  "main": "index.js",
+  "authors": [
+    "Kirill"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "slick.js#^1.8.1",
+    "animate.css": "^3.5.2",
+    "jPlayer": "jplayer#^2.9.2",
+    "flipclock": "^0.7.7"
+  }
+}
