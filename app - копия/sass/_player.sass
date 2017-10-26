@@ -1,0 +1,40 @@
+.jp-volume-controls
+	max-width: 200px
+	.jp-volume-bar
+		height: 5px
+		background: #D8D1D1
+		overflow: hidden
+		transition: all 400ms
+		&:hover
+			cursor: pointer
+			height: 20px
+		.jp-volume-bar-value
+			background: #F40909
+			height: 20px
+.player
+	.fa
+		color: #FFF
+		transition: font-size 400ms
+		text-shadow: 1px 1px 5px red
+		&:hover
+			cursor: pointer
+			color: red
+			font-size: 20px
+			text-shadow: 1px 1px 5px #fff
+
+.jp-state-playing
+	.fa-pause
+		color: red
+
+
+.jp-progress
+	width: 80%
+	overflow: hidden
+	&:hover
+		cursor: pointer
+.jp-seek-bar
+	height: 20px
+	background-color: #A5A5A5
+	.jp-play-bar
+		background: #F40909
+		height: 20px

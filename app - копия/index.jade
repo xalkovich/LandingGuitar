@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="css/main.min.css")
+  link(rel="icon", href="img/favicon.ico")
+  title GuitarForewer
+body
+  nav.grid.nav
+    div
+      a(href="") обо мне
+      a(href="") отзывы
+      a(href="") музыка
+      a(href="") контакты
+    div
+      img(src="img/logo.png", alt="")
+      
+
+  section.grid.slides
+    .img
+      img(src="img/slider1.jpeg", alt="")
+      h1.hidden(data-animate="fadeInLeftBig") SLIDE 1
+    .img
+      img(src="img/slider2.jpeg", alt="")
+      h1.hidden(data-animate="fadeInRightBig") SLIDE 2
+    .img
+      img(src="img/slider3.jpeg", alt="")
+      h1.hidden(data-animate="fadeInDownBig") SLIDE 3
+  
+
+  section.grid.about(style='background-image: url(img/paralax1.jpg)')
+    .img
+      img(src="img/guitarist.png", alt="")
+    div
+      h2 обо мне
+      hr
+      p.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur mollitia dolores autem aliquid. Autem similique iste inventore rem deleniti laboriosam mollitia quasi a. Quo magni temporibus repellat optio, illo commodi.
+      p.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptatibus laboriosam, voluptatem consectetur distinctio architecto ex! Qui harum expedita suscipit eum quaerat excepturi, ipsam totam deleniti magnam. Doloremque, est, saepe.
+      div.social
+        .fa.fa-facebook
+        .fa.fa-twitter
+        .fa.fa-google-plus
+        .fa.fa-linkedin
+    include player
+
+
+  section.feedback.grid(style='background-image: url(img/paralax2.jpg)')
+    .line
+      h2 отзывы
+      hr
+    include feedback
+    .concert
+      h2 количество концертов 
+    .counter
+    .form.grid
+      input(type="text", name="", placeholder="name")
+      input(type="text", name="", placeholder="phone")
+      textarea(name="text", placeholder="text...")
+      input(type="button", name="", value="send")
+      
+    .email.grid
+      .fa.fa-envelope 
+        span kirill.lozovski@gmail.com
+      .fa.fa-phone 
+        span 000-00-00
+      .social
+        .fa.fa-facebook
+        .fa.fa-twitter
+        .fa.fa-google-plus
+        .fa.fa-linkedin
+    footer
+      span @all4site.com.ua Все прва защищены 2017
+  
+  script(src="js/main.min.js")
