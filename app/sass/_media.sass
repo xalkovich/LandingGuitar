@@ -5,7 +5,7 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	.slides
-		height: 58vh
+		height: 88vh
 	.feedbackslides
 	.feedback
 		grid-template-columns: 1fr repeat(3, 300px) 1fr
@@ -21,9 +21,9 @@
 			// padding: 10px
 		::-webkit-scrollbar
 			width: 5px
-			background: #808080
-			
-
+			background: rgba(255, 0, 0, 0.7)
+	.form input:nth-of-type(3)
+		margin: 0 100px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -32,12 +32,25 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	footer
+		grid-column: 1/4
+	.feedback
+		grid-template-columns: max-content 1fr
+		.img
+			width: 400px
+			height: 400px
+			justify-self: center
+			margin: 0
+		.form
+			grid-column: span 3
+			margin: 0 20%
+		.email
+			grid-column: span 3
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.feeImg
+		width: 100vw !important
 
 
 /* Custom, iPhone Retina */

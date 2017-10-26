@@ -44,7 +44,8 @@ body, html {
   font-family: Roboto, sans-serif; }
 
 .grid {
-  display: grid; }
+  display: grid !important;
+  width: 100vw; }
 
 .img-responsive {
   display: block;
@@ -3076,7 +3077,8 @@ img {
     .slides .img img {
       background-size: cover;
       background-position: center;
-      width: 100%; }
+      width: 100vw;
+      height: 100vh; }
     .slides .img h1 {
       position: absolute;
       display: inline-block;
@@ -3124,7 +3126,7 @@ img {
     padding: 5% 10%;
     -ms-flex-line-pack: start;
         align-content: start;
-    grid-gap: 5%; }
+    grid-gap: 5px; }
     .about .player .player_container_1,
     .about .player .player_container_2,
     .about .player .player_container_3,
@@ -3284,14 +3286,17 @@ img {
   .form input:nth-of-type(3) {
     grid-row: 3;
     grid-column: 1 / 3;
-    margin: 0 200px;
+    margin: 0 150px;
     padding: 0; }
 
 .email {
   grid-column: 3;
   color: #fff;
-  grid-template-columns: 1fr;
-  justify-items: start; }
+  grid-template-columns: -webkit-max-content;
+  grid-template-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .email .fa {
     font-size: 30px;
     padding-top: 20px;
@@ -3319,7 +3324,7 @@ footer {
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .slides {
-    height: 58vh; }
+    height: 88vh; }
   .feedback {
     grid-template-columns: 1fr repeat(3, 300px) 1fr; }
     .feedback .img {
@@ -3333,7 +3338,9 @@ footer {
       height: 35vh; }
     .feedback ::-webkit-scrollbar {
       width: 5px;
-      background: #808080; } }
+      background: rgba(255, 0, 0, 0.7); }
+  .form input:nth-of-type(3) {
+    margin: 0 100px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -3341,11 +3348,26 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/ }
+  footer {
+    grid-column: 1/4; }
+  .feedback {
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr; }
+    .feedback .img {
+      width: 400px;
+      height: 400px;
+      justify-self: center;
+      margin: 0; }
+    .feedback .form {
+      grid-column: span 3;
+      margin: 0 20%; }
+    .feedback .email {
+      grid-column: span 3; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/ }
+  .feeImg {
+    width: 100vw !important; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
