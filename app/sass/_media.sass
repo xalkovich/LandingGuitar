@@ -4,7 +4,25 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.slides
+		height: 58vh
+	.feedbackslides
+	.feedback
+		grid-template-columns: 1fr repeat(3, 300px) 1fr
+		.img
+			width: 200px
+			height: 200px
+			margin-left: 15%
+			img
+				width: 100%
+		p
+			overflow: auto
+			height: 35vh
+			// padding: 10px
+		::-webkit-scrollbar
+			width: 5px
+			background: #808080
+			
 
 
 /* Medium Devices, Desktops */

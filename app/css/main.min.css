@@ -33,10 +33,6 @@
   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v16-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
-:root {
-  font-size: 16px;
-  font-family: "xalk", sans-serif; }
-
 body, html {
   font-size: 16px;
   min-width: 320;
@@ -44,7 +40,8 @@ body, html {
   line-height: 1.65;
   overflow-x: hidden;
   opacity: 1;
-  display: grid; }
+  display: grid;
+  font-family: Roboto, sans-serif; }
 
 .grid {
   display: grid; }
@@ -3057,7 +3054,8 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  color: #000000; }
   .nav div a {
     -webkit-transition: color 400ms;
     transition: color 400ms;
@@ -3192,8 +3190,8 @@ img {
   .feedback .img {
     background: #000;
     overflow: hidden;
-    max-width: 450px;
-    max-height: 400px;
+    width: 400px;
+    height: 400px;
     margin: 10px;
     border-radius: 100%;
     position: relative; }
@@ -3218,7 +3216,7 @@ img {
     color: #fff;
     background: rgba(128, 128, 128, 0.5);
     padding: 10px 25px;
-    min-height: 35vh;
+    height: 35vh;
     line-height: 1.8;
     font-style: italic; }
 
@@ -3248,7 +3246,10 @@ img {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr minmax(200px, -webkit-max-content) 1fr;
   grid-template-rows: 1fr minmax(200px, max-content) 1fr;
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .form input {
     background-color: rgba(128, 128, 128, 0.5);
     border: none;
@@ -3317,7 +3318,22 @@ footer {
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .slides {
+    height: 58vh; }
+  .feedback {
+    grid-template-columns: 1fr repeat(3, 300px) 1fr; }
+    .feedback .img {
+      width: 200px;
+      height: 200px;
+      margin-left: 15%; }
+      .feedback .img img {
+        width: 100%; }
+    .feedback p {
+      overflow: auto;
+      height: 35vh; }
+    .feedback ::-webkit-scrollbar {
+      width: 5px;
+      background: #808080; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
