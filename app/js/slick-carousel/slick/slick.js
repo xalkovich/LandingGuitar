@@ -583,10 +583,10 @@
 
             _.$slider.empty().append(newSlides);
             _.$slider.children().children().children()
-                .css({
-                    'width': (100 / _.options.slidesPerRow) + 'vw',
-                    'display': 'grid'
-                });
+            // .css({
+            //     'width': (100 / _.options.slidesPerRow) + 'vw',
+            //     'display': 'grid'
+            // });
 
         }
 

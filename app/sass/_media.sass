@@ -4,6 +4,16 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.about
+		.aboutMe
+			width: 50vw
+			h2
+				height: auto
+			p
+				font-size: 1em
+		.img
+			img
+				width: 300px
 	.slides
 		height: 88vh
 	.feedbackslides
@@ -12,40 +22,60 @@
 		.img
 			width: 200px
 			height: 200px
-			margin-left: 15%
+			justify-self: center
 			img
 				width: 100%
 		p
 			overflow: auto
 			height: 35vh
-			// padding: 10px
+			justify-self: center
+			margin: 20px 0
 		::-webkit-scrollbar
 			width: 5px
 			background: rgba(255, 0, 0, 0.7)
 	.form input:nth-of-type(3)
 		margin: 0 100px
-
+	.email
+		justify-self: center
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.about
+		.img
+			img
+				max-width: 300px
+		.aboutMe
+			padding-left: 10%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	footer
 		grid-column: 1/4
+		padding-left: 15%
+	.about
+		.img
+			img
+				max-width: 250px
+		.player
+			.player_container_1 , 
+			.player_container_2,
+			.player_container_3,
+			.player_container_4,
+			.player_container_5,
+			.player_container_6,
+				.text
+					font-size: .8em
+					margin-top: 0
+		.aboutMe
+			padding-left: 5%
 	.feedback
-		grid-template-columns: max-content 1fr
 		.img
 			width: 400px
 			height: 400px
-			justify-self: center
-			margin: 0
-		.form
-			grid-column: span 3
-			margin: 0 20%
-		.email
-			grid-column: span 3
+		p
+			overflow: auto
+			height: 45vh
+			width: 35vw
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -53,7 +83,33 @@
 		max-width: 60vw
 	.slides
 		display: none
-
+	.feedback
+		.img
+			width: 400px
+			height: 400px
+		p
+			overflow: auto
+			height: 45vh
+			width: 55vw
+	.nav
+		div a
+			display: none
+		div img
+			display: none
+		.cross
+			width: 100px
+			position: relative
+			justify-self: start
+			grid-column: 1
+			&::before
+				position: absolute
+				content: '\f0c9'
+				font-family: FontAwesome
+				color: #fff
+				font-size: 50px
+				left: 10%
+				top: 10%
+				
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

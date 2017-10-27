@@ -49,11 +49,10 @@ img
       display: none
 .about
   color: #fff
-  
   grid-template-columns: 1fr 2fr
   background-size: cover
   background-position: center
-  width: 100%
+  width: 100vw
   min-height: 100vh
   color: #000
   .img
@@ -61,29 +60,29 @@ img
     margin-top: 50px
     img
       max-width: 400px
-  h2
-    padding-left: 17%
-    font-weight: bold
-    margin-bottom: 0px
-    text-transform: uppercase
-  hr
-    margin-right: 55%
-    margin-left: 7%
-    border-color: #ff0000
-  p
-    padding-left: 5%
-    max-width: 50%
-    font-weight: 200
-  .social
-    padding-left: 4%
-    padding-top: 3%
-    font-size: 40px
-    .fa
-      padding: 10px
+  .aboutMe
+    width: 40vw
+    justify-items: center
+    h2
+      font-weight: bold
+      margin-bottom: 0px
+      height: 40px
+      text-transform: uppercase
+    hr
+      width: 50%
+      border-color: #ff0000
+    p
+      font-weight: 200
+      font-size: 1.3em
+    .social
+      padding-top: 3%
+      font-size: 40px
+      justify-self: start
+      .fa
+        padding: 10px
   .player
     grid-column: span 3
     padding: 5% 10%
-    align-content: start
     grid-gap: 5px
  
     .player_container_1 , 
@@ -93,9 +92,11 @@ img
     .player_container_5,
     .player_container_6,
       align-content: center
-      grid-template-columns: minmax(30px, max-content) minmax(30px, max-content) minmax(15%, auto) minmax(65%, auto) 1fr
+      grid-template-columns: max-content max-content 1fr 2fr 1fr
+      grid-column-gap: 20px
       .jp-progress
-        justify-self: center
+        justify-self: start
+        width: 80%
       .jp-volume-controls
         align-self: center
       .text
@@ -108,6 +109,7 @@ img
   background-size: cover
   background-position: center
   justify-content: center
+  width: 100vw
   .line
     grid-column: span 5
     // background-color: rgba($accent, 0.5)
@@ -136,6 +138,7 @@ img
     margin: 10px
     border-radius: 100%
     position: relative
+    justify-self: center
     &::before
       content: ''
       position: absolute
@@ -153,13 +156,15 @@ img
         opacity: 0
 
   p
-    margin: 20px 50px
+    margin: 20px 0
     color: #fff
     background: rgba(#808080, 0.5)
     padding: 10px 25px
     height: 35vh
     line-height: 1.8
     font-style: italic
+    width: 15vw
+    justify-self: center
 .concert
   grid-column: span 5
   h2
@@ -212,7 +217,6 @@ img
   grid-column: 3
   color: #fff
   grid-template-columns: max-content
-  justify-content: center
   .fa
     font-size: 30px
     padding-top: 20px

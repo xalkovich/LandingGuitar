@@ -52,7 +52,9 @@ gulp.task('scripts', function () {
     'app/js/flipclock/compiled/flipclock.min.js',
     'app/js/flipclock.js',
     'app/js/feedbackslides.js',
-    'app/js/player.js'
+    'app/js/player.js',
+    'app/js/menu.js',
+
   ])
     .pipe(concat('main.min.js')) // Собираем их в кучу в новом файле
     // .pipe(uglify()) // Сжимаем JS файл
