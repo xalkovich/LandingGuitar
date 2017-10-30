@@ -3266,6 +3266,9 @@ img {
     .form input:-ms-input-placeholder {
       color: #fff;
       padding-left: 5px; }
+    .form input::-ms-input-placeholder {
+      color: #fff;
+      padding-left: 5px; }
     .form input::placeholder {
       color: #fff;
       padding-left: 5px; }
@@ -3282,6 +3285,9 @@ img {
       color: #fff;
       padding-left: 5px; }
     .form textarea:-ms-input-placeholder {
+      color: #fff;
+      padding-left: 5px; }
+    .form textarea::-ms-input-placeholder {
       color: #fff;
       padding-left: 5px; }
     .form textarea::placeholder {
