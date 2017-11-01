@@ -46,6 +46,7 @@ gulp.task('build', ['clean', 'sass', 'scripts', 'csso', 'img'], function () {
 gulp.task('scripts', function () {
   return gulp.src([ // Берем все необходимые библиотеки
     'app/js/jquery/dist/jquery.js',
+    'app/js/jquery-ui/jquery-ui.js',
     'app/js/slick-carousel/slick/slick.js',
     'app/js/jPlayer/dist/jplayer/jquery.jplayer.js',
     'app/js/slick.js',

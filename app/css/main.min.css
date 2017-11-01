@@ -43,6 +43,12 @@ body, html {
   display: grid;
   font-family: Roboto, sans-serif; }
 
+.hidden {
+  display: none !important; }
+
+.visible {
+  display: grid !important; }
+
 .grid {
   display: grid; }
 
@@ -3044,6 +3050,12 @@ img {
   background-position: center;
   background-size: cover; }
 
+.active {
+  color: #00600b; }
+
+.navSmall {
+  display: none; }
+
 .nav {
   grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
@@ -3323,17 +3335,19 @@ footer {
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   .about .aboutMe {
     width: 50vw; }
     .about .aboutMe h2 {
-      height: auto; }
+      height: 60px; }
     .about .aboutMe p {
       font-size: 1em; }
   .about .img img {
     width: 300px; }
   .slides {
-    height: 88vh; }
+    height: 68vh; }
+    .slides .img img {
+      height: auto; }
   .feedback {
     grid-template-columns: 1fr repeat(3, 300px) 1fr; }
     .feedback .img {
@@ -3364,6 +3378,18 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .nav {
+    grid-template-columns: minmax(-webkit-max-content, 1fr) 1fr;
+    grid-template-columns: minmax(max-content, 1fr) 1fr; }
+    .nav div a {
+      padding: 10px; }
+  .slides {
+    background: #000000;
+    height: auto; }
+    .slides .img h1 {
+      top: 25%; }
+    .slides .img img {
+      height: auto; }
   footer {
     grid-column: 1/4;
     padding-left: 15%; }
@@ -3404,19 +3430,45 @@ footer {
     display: none; }
   .nav div img {
     display: none; }
-  .nav .cross {
+  .line {
     width: 100px;
-    position: relative;
+    position: fixed;
     justify-self: start;
-    grid-column: 1; }
-    .nav .cross::before {
+    grid-column: 1;
+    z-index: 9; }
+    .line::before {
       position: absolute;
       content: '\f0c9';
       font-family: FontAwesome;
       color: #fff;
       font-size: 50px;
       left: 10%;
-      top: 10%; } }
+      top: 10%; }
+  .navSmall {
+    position: fixed;
+    z-index: 998;
+    background: red;
+    width: 40vw;
+    height: 100vh;
+    grid-template-rows: repeat(5, 45px);
+    margin-bottom: -50vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: none; }
+    .navSmall a {
+      -webkit-transition: color 400ms;
+      transition: color 400ms;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-left: 20%; }
+    .navSmall::before {
+      position: absolute;
+      content: '\f00d';
+      font-family: FontAwesome;
+      color: #fff;
+      font-size: 50px;
+      left: 10%;
+      top: -3%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

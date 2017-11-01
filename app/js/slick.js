@@ -35,10 +35,11 @@ $(document).ready(function () {
 	$('.slides').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 5000,
 		useTransform: false,
 		pauseOnHover: false,
+		arrows: false,
 		// speed: 2000,
 
 	});

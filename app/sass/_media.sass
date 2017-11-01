@@ -3,19 +3,22 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1280px)
 	.about
 		.aboutMe
 			width: 50vw
 			h2
-				height: auto
+				height: 60px
 			p
 				font-size: 1em
 		.img
 			img
 				width: 300px
 	.slides
-		height: 88vh
+		height: 68vh
+		.img
+			img
+				height: auto
 	.feedbackslides
 	.feedback
 		grid-template-columns: 1fr repeat(3, 300px) 1fr
@@ -49,6 +52,19 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.nav
+		grid-template-columns: minmax(max-content, 1fr) 1fr
+		div
+			a
+				padding: 10px
+	.slides
+		background: #000000
+		height: auto
+		.img
+			h1
+				top: 25%
+			img
+				height: auto
 	footer
 		grid-column: 1/4
 		padding-left: 15%
@@ -77,6 +93,7 @@
 			height: 45vh
 			width: 35vw
 
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.form
@@ -96,19 +113,45 @@
 			display: none
 		div img
 			display: none
-		.cross
-			width: 100px
-			position: relative
-			justify-self: start
-			grid-column: 1
-			&::before
-				position: absolute
-				content: '\f0c9'
-				font-family: FontAwesome
-				color: #fff
-				font-size: 50px
-				left: 10%
-				top: 10%
+	.line
+		width: 100px
+		position: fixed
+		justify-self: start
+		grid-column: 1
+		z-index: 9
+		&::before
+			position: absolute
+			content: '\f0c9'
+			font-family: FontAwesome
+			color: #fff
+			font-size: 50px
+			left: 10%
+			top: 10%
+	.navSmall
+		position: fixed
+		z-index: 998
+		background: red
+		width: 40vw
+		height: 100vh
+		grid-template-rows: repeat(5, 45px)
+		margin-bottom: -50vh
+		align-content: center
+		display: none
+		a
+			transition: color 400ms
+			font-weight: bold
+			text-transform: uppercase
+			padding-left: 20%
+		&::before
+			position: absolute
+			content: '\f00d'
+			font-family: FontAwesome
+			color: #fff
+			font-size: 50px
+			left: 10%
+			top: -3%
+			
+
 				
 
 /* Custom, iPhone Retina */

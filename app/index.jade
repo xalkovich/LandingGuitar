@@ -16,16 +16,14 @@ body
       a(href="") контакты
     div
       img(src="img/logo.png", alt="")
-    .cross
+  .line    
   nav.grid.navSmall
-    div
-      a(href="") обо мне
-      a(href="") отзывы
-      a(href="") музыка
-      a(href="") контакты
-    div
-      
-
+    .cross
+    a.active(href="") обо мне
+    a(href="") отзывы
+    a(href="") музыка
+    a(href="") контакты
+    
   section.grid.slides
     .img
       img(src="img/slider1.jpeg", alt="")
@@ -61,9 +59,9 @@ body
       h2 отзывы
       hr
     include feedback
+    .counter
     .concert
       h2 количество концертов 
-    .counter
     .form.grid
       input(type="text", name="", placeholder="name")
       input(type="text", name="", placeholder="phone")
