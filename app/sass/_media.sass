@@ -122,26 +122,26 @@
 				padding: 0 5px 0px 10px
 		.player
 			.player_container_1
-				grid-template-columns: repeat(5, minmax(min-content, 10px)
+				grid-template-columns: 10px 10px min-content 1fr
 				grid-template-rows: repeat(12, min-content)
 				.fa-play
 					grid-column: 1
 					grid-row: 1
-				.fa-pause
+				// .fa-pause
+				// 	grid-column: 2
+				// 	grid-row: 1
+				.fa-stop
 					grid-column: 2
 					grid-row: 1
-				.fa-stop
+				.text
 					grid-column: 3
 					grid-row: 1
-				.text
-					grid-column: 4
-					grid-row: 1
 				.jp-progress
-					grid-column: span 5
+					grid-column: span 4
 					grid-row: 2
 					width: 100%
 				.jp-volume-controls
-					grid-column: 5
+					grid-column: 4
 					grid-row: 1
 	.form
 		max-width: 60vw
