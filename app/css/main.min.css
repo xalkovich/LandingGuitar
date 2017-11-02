@@ -3415,6 +3415,35 @@ footer {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: -webkit-min-content 1fr;
+    grid-template-rows: min-content 1fr; }
+    .about .img {
+      grid-column: 1;
+      grid-row: 1;
+      max-width: 100vw;
+      width: 95vw;
+      justify-self: center; }
+      .about .img img {
+        width: 100vw;
+        max-width: 100%; }
+    .about .aboutMe {
+      grid-column: 1;
+      grid-row: 2;
+      width: 100vw;
+      color: #ffffff; }
+      .about .aboutMe h2 {
+        height: 70px; }
+      .about .aboutMe hr {
+        width: 75%; }
+      .about .aboutMe p {
+        padding: 0 5px 0px 10px; }
+    .about .player_container_1 {
+      grid-template-columns: repeat(5, -webkit-min-content);
+      grid-template-columns: repeat(5, min-content);
+      grid-template-rows: repeat(12, -webkit-min-content);
+      grid-template-rows: repeat(12, min-content); }
   .form {
     max-width: 60vw; }
   .slides {
@@ -3472,46 +3501,6 @@ footer {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .about .player .player_container_1 {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, -webkit-min-content) 1fr 1fr;
-    grid-template-columns: repeat(3, min-content) 1fr 1fr; }
-    .about .player .player_container_1 .fa {
-      grid-row: 1;
-      grid-column: span 2; }
-    .about .player .player_container_1 .jp-progress {
-      grid-row: 2;
-      grid-column: span 2; }
-    .about .player .player_container_1 .jp-volume-controls {
-      grid-row: 3; }
-  .about .slides {
-    display: none; }
-  .about .img {
-    width: 250px;
-    height: 250px; }
-  .about .line hr {
-    margin: 0 20% 20px; }
-  .about .form {
-    grid-template-rows: 1fr 1fr minmax(200px, -webkit-max-content) 1fr;
-    grid-template-rows: 1fr 1fr minmax(200px, max-content) 1fr;
-    grid-template-columns: 1fr 1fr;
-    max-width: 80vw;
-    margin: 0 10%; }
-    .about .form input:nth-of-type(1) {
-      grid-column: span 2;
-      grid-row: 1; }
-    .about .form input:nth-of-type(2) {
-      grid-column: span 2;
-      grid-row: 2; }
-    .about .form input:nth-of-type(3) {
-      grid-column: span 2;
-      grid-row: 4;
-      margin: 0; }
-    .about .form textarea {
-      grid-column: span 2;
-      grid-row: 3; }
-  .about .email .fa {
-    font-size: 1.2em; }
   footer span {
     font-size: .8em; } }
 
