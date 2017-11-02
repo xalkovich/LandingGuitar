@@ -3428,8 +3428,8 @@ footer {
     .about .img {
       grid-column: 1;
       grid-row: 1;
-      max-width: 100vw;
-      width: 95vw;
+      max-width: 95vw;
+      width: 100vw;
       justify-self: center; }
       .about .img img {
         width: 100vw;
@@ -3438,9 +3438,12 @@ footer {
       grid-column: 1;
       grid-row: 2;
       width: 100vw;
-      color: #ffffff; }
+      color: #ffffff;
+      padding: 0; }
       .about .aboutMe h2 {
-        height: 70px; }
+        height: 70px;
+        width: 100%;
+        text-align: center; }
       .about .aboutMe hr {
         width: 75%; }
       .about .aboutMe p {
