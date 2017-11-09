@@ -9,15 +9,16 @@
   <title>GuitarForewer</title>
 </head>
 <body>
+  <div class="home"></div>
   <nav class="grid nav">
-    <div><a href="">обо мне</a><a href="">отзывы</a><a href="">музыка</a><a href="">контакты</a></div>
+    <div><a href="#home" class="active">Главная</a><a href="#aboutme">обо мне</a><a href="#feedback">отзывы</a><a href="#player">музыка</a><a href="#email">контакты</a></div>
     <div><img src="img/logo.png" alt=""/></div>
   </nav>
   <div class="line">   </div>
   <nav class="grid navSmall">
-    <div class="cross"></div><a href="" class="active">обо мне</a><a href="">отзывы</a><a href="">музыка</a><a href="">контакты</a>
+    <div class="cross"></div><a href="#home" class="active">Главная</a><a href="#aboutme">обо мне</a><a href="#feedback">отзывы</a><a href="#player">музыка</a><a href="#email">контакты</a>
   </nav>
-  <section class="grid slides">
+  <section class="grid slides section">
     <div class="img"><img src="img/slider1.jpeg" alt=""/>
       <h1 data-animate="fadeInLeftBig" class="hidden">SLIDE 1</h1>
     </div>
@@ -28,7 +29,7 @@
       <h1 data-animate="fadeInDownBig" class="hidden">SLIDE 3</h1>
     </div>
   </section>
-  <section style="background-image: url(img/paralax1.jpg)" class="grid about">
+  <section style="background-image: url(img/paralax1.jpg)" class="grid about aboutme">
     <div class="img"><img src="img/guitarist.png" alt=""/></div>
     <div class="aboutMe grid">
       <h2>обо мне</h2>
@@ -41,7 +42,7 @@
         <div class="fa fa-google-plus"></div>
         <div class="fa fa-linkedin"></div>
       </div>
-    </div>
+    </div><a name="player"></a>
     <div class="grid player">
       <div class="jplayer_1"></div>
       <div class="player_container_1 grid">
@@ -147,7 +148,7 @@
       </div>
     </div>
   </section>
-  <section style="background-image: url(img/paralax2.jpg)" class="feedback grid">
+  <section style="background-image: url(img/paralax2.jpg)" class="section feedback grid">
     <div class="line">
       <h2>отзывы</h2>
       <hr/>
@@ -189,8 +190,8 @@
       <input type="button" name="" value="send"/>
     </div>
     <div class="email grid">
-      <div class="fa fa-envelope"> <span>kirill.lozovski@gmail.com</span></div>
-      <div class="fa fa-phone"> <span>000-00-00</span></div>
+      <div class="fa fa-envelope"> </div><span class="name">kirill.lozovski@gmail.com</span>
+      <div class="fa fa-phone"> </div><span class="phone">000-00-00</span>
       <div class="social">
         <div class="fa fa-facebook"></div>
         <div class="fa fa-twitter"></div>
@@ -198,7 +199,7 @@
         <div class="fa fa-linkedin"></div>
       </div>
     </div>
-    <footer><span>@all4site.com.ua Все прва защищены 2017</span></footer>
+    <footer class="footer"><span>@all4site.com.ua Все прва защищены 2017</span></footer>
   </section>
   <script src="js/main.min.js"></script>
 </body>

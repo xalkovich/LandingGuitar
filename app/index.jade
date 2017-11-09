@@ -8,23 +8,26 @@ head
   link(rel="icon", href="img/favicon.ico")
   title GuitarForewer
 body
+  .home
   nav.grid.nav
     div
-      a(href="") обо мне
-      a(href="") отзывы
-      a(href="") музыка
-      a(href="") контакты
+      a.active(href="#home") Главная
+      a(href="#aboutme") обо мне
+      a(href="#feedback") отзывы
+      a(href="#player") музыка
+      a(href="#email") контакты
     div
       img(src="img/logo.png", alt="")
   .line    
   nav.grid.navSmall
     .cross
-    a.active(href="") обо мне
-    a(href="") отзывы
-    a(href="") музыка
-    a(href="") контакты
+    a.active(href="#home") Главная
+    a(href="#aboutme") обо мне
+    a(href="#feedback") отзывы
+    a(href="#player") музыка
+    a(href="#email") контакты
     
-  section.grid.slides
+  section.grid.slides.section
     .img
       img(src="img/slider1.jpeg", alt="")
       h1.hidden(data-animate="fadeInLeftBig") SLIDE 1
@@ -35,7 +38,7 @@ body
       img(src="img/slider3.jpeg", alt="")
       h1.hidden(data-animate="fadeInDownBig") SLIDE 3
 
-  section.grid.about(style='background-image: url(img/paralax1.jpg)')
+  section.grid.about.aboutme(style='background-image: url(img/paralax1.jpg)')
     .img
       img(src="img/guitarist.png", alt="")
     .aboutMe.grid
@@ -50,9 +53,10 @@ body
         .fa.fa-twitter
         .fa.fa-google-plus
         .fa.fa-linkedin
+    a(name="player")
     include player
 
-  section.feedback.grid(style='background-image: url(img/paralax2.jpg)')
+  section.section.feedback.grid(style='background-image: url(img/paralax2.jpg)')
     .line
       h2 отзывы
       hr
@@ -68,15 +72,15 @@ body
       
     .email.grid
       .fa.fa-envelope 
-        span kirill.lozovski@gmail.com
+      span.name kirill.lozovski@gmail.com
       .fa.fa-phone 
-        span 000-00-00
+      span.phone 000-00-00
       .social
         .fa.fa-facebook
         .fa.fa-twitter
         .fa.fa-google-plus
         .fa.fa-linkedin
-    footer
+    footer.footer
       span @all4site.com.ua Все прва защищены 2017
   
   script(src="js/main.min.js")

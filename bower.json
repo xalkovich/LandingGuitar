@@ -19,6 +19,7 @@
     "animate.css": "^3.5.2",
     "jPlayer": "jplayer#^2.9.2",
     "flipclock": "^0.7.7",
-    "jquery-ui": "jqueryui#^1.12.1"
+    "jquery-ui": "jqueryui#^1.12.1",
+    "fullpage.js": "^2.9.5"
   }
 }

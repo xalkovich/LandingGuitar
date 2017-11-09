@@ -55,6 +55,7 @@ gulp.task('scripts', function () {
     'app/js/feedbackslides.js',
     'app/js/player.js',
     'app/js/menu.js',
+    'app/js/smoothScroll.js',
 
   ])
     .pipe(concat('main.min.js')) // Собираем их в кучу в новом файле
