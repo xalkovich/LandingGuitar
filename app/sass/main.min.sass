@@ -1,19 +1,21 @@
-@import "fonts"
-@import "base"
-@import "vars"
-@import "libs"
-@import "player"
-
+@import fonts
+@import base
+@import vars
+@import libs
+@import player
 
 img
   background-position: center
   background-size: cover
+
 .active
   color: #ff0000
+
 .navSmall
-	display: none
+  display: none
+
 .nav
-  grid-template-columns: repeat(2 ,1fr)
+  grid-template-columns: repeat(2, 1fr)
   align-items: center
   justify-items: center
   background-color: rgba($accent, 10)
@@ -22,26 +24,40 @@ img
   z-index: 1
   position: relative
   color: #000000
+  position: fixed
+  width: 100%
+
   div a
     transition: color 400ms
     padding: 10px
+
     &:hover
       color: red
+
     &:active
       color: red
+
   div img
     padding-top: 5px
+
+.navMenu
+  background-color: rgba($accent, 0.9)
+
 .slides
-  height: 100vh-8vh
+  height: 100vh
   overflow: hidden
+  padding-top: 8vh
+
   .img
     width: 100%
     position: relative
+
     img
       background-size: cover
       background-position: center
       width: 100vw
       height: 100vh
+
     h1
       position: absolute
       display: inline-block
@@ -49,8 +65,10 @@ img
       top: 40%
       text-align: center
       color: red
+
     .hidden
       display: none
+
 .about
   color: #fff
   grid-template-columns: 1fr 2fr
@@ -59,68 +77,85 @@ img
   width: 100vw
   min-height: 100vh
   color: #000
+
   a[name='aboutme']
     height: 0px
+
   .img
     justify-self: center
     margin-top: 50px
     grid-column: 1
+
     img
       max-width: 400px
+
   .aboutMe
     width: 40vw
     justify-items: center
+
     h2
       font-weight: bold
       margin-bottom: 0px
       height: 40px
       text-transform: uppercase
+
     hr
       width: 50%
       border-color: #ff0000
+
     p
       font-weight: 200
       font-size: 1.3em
+
     .social
       padding-top: 3%
       font-size: 40px
       justify-self: start
+
       .fa
         padding: 10px
+
   .player
     grid-column: span 3
     padding: 5% 10%
     grid-gap: 5px
- 
-    .player_container_1 , 
+
+    .player_container_1,
     .player_container_2,
     .player_container_3,
     .player_container_4,
     .player_container_5,
-    .player_container_6,
+    .player_container_6
       align-content: center
       grid-template-columns: max-content max-content 1fr 2fr 1fr
       grid-column-gap: 20px
+
       .jp-progress
         justify-self: start
         width: 80%
+
       .jp-volume-controls
         align-self: center
+
       .text
         color: #FFF
         text-align: center
         margin-top: -5px
         height: 20px
+
 .feedback
   grid-template-columns: 1fr repeat(3, 450px) 1fr
   background-size: cover
   background-position: center
   justify-content: center
   width: 100vw
+
   .line
     grid-column: span 5
+
     // background-color: rgba($accent, 0.5)
     margin-bottom: 20px
+
     h2
       margin: 0
       padding: 10px
@@ -129,14 +164,18 @@ img
       text-transform: uppercase
       font-weight: bold
       font-style: normal
+
     hr
       margin-right: 37%
       margin-left: 38%
       border-color: #ff0000
       margin-top: 0
       margin-bottom: 20px
+
   .feedbackslides
-    grid-column: 2/5
+    grid-column: 2 / 5
+    
+
   .img
     background: #000
     overflow: hidden
@@ -146,17 +185,20 @@ img
     border-radius: 100%
     position: relative
     justify-self: center
+
     &::before
-      content: ''
+      content: ""
       position: absolute
       width: 100%
       height: 100%
-      background: rgba(#000000, .6)
+      background: rgba(#000000, 0.6)
       transition: opacity 400ms
+
     &:hover
       cursor: pointer
+
       &::before
-        content: ''
+        content: ""
         position: absolute
         width: 100%
         height: 100%
@@ -172,24 +214,31 @@ img
     font-style: italic
     width: 15vw
     justify-self: center
+
 .concert
   grid-column: span 5
+
   h2
     color: #ff0000
     text-align: center
     margin: 0
     font-size: 1.9rem
+
   h2:nth-of-type(2)
     margin-bottom: 50px
     font-weight: bold
+
 .flip-clock-wrapper
   width: auto
+
 .flip-clock-wrapper ul li a div div.inn
   color: red
   text-shadow: none
+
 .counter
   grid-column: span 5
   justify-self: center
+
 .form
   width: 30vw
   grid-column: span 5
@@ -199,31 +248,38 @@ img
   justify-content: center
   justify-self: center
   padding-top: 20px
+
   input
     background-color: rgba($accent, 0.5)
     border: none
     color: #fff
+
     &::placeholder
-        color: #fff
-        padding-left: 5px
+      color: #fff
+      padding-left: 5px
+
   input:nth-of-type(1)
     grid-column: 1
 
   input:nth-of-type(2)
     grid-column: 2
+
   textarea
     grid-column: span 2
     grid-row: 2
     background-color: rgba($accent, 0.5)
     border: none
+
     &::placeholder
-        color: #fff
-        padding-left: 5px
+      color: #fff
+      padding-left: 5px
+
   input:nth-of-type(3)
     grid-row: 3
     grid-column: 1 / 3
     margin: 0 150px
     padding: 0
+
 .email
   width: 30vw
   grid-column: span 5
@@ -233,29 +289,31 @@ img
   justify-self: center
   grid-column-gap: 10%
   padding-top: 4%
+
   .fa
     font-size: 30px
     text-shadow: 3px 3px 1px #000
+
   span
     text-shadow: none
     font-size: 30px
-  // .fa:nth-child(2)
-  //   grid-column: 1
+
 .feedback .email .social
-    grid-column: span 2
-    justify-self: center
-    .fa
-      padding-right: 20px
-      padding-top: 20px
-      padding-bottom: 30px
-      text-shadow: 4px 4px 1px #000
+  grid-column: span 2
+  justify-self: center
+
+  .fa
+    padding-right: 20px
+    padding-top: 20px
+    padding-bottom: 30px
+    text-shadow: 4px 4px 1px #000
+
 .footer
-  grid-column: 1/3
+  grid-column: 1 / 3
+
   span
     color: #fff
     padding-bottom: 0
 
-
 // ADAPTIVE
-@import "media"
-// Всегда в конце
+@import media

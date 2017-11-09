@@ -3068,7 +3068,9 @@ img {
   text-transform: uppercase;
   z-index: 1;
   position: relative;
-  color: #000000; }
+  color: #000000;
+  position: fixed;
+  width: 100%; }
   .nav div a {
     -webkit-transition: color 400ms;
     transition: color 400ms;
@@ -3080,9 +3082,13 @@ img {
   .nav div img {
     padding-top: 5px; }
 
+.navMenu {
+  background-color: rgba(128, 128, 128, 0.9); }
+
 .slides {
-  height: 92vh;
-  overflow: hidden; }
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 8vh; }
   .slides .img {
     width: 100%;
     position: relative; }
@@ -3205,7 +3211,7 @@ img {
       margin-top: 0;
       margin-bottom: 20px; }
   .feedback .feedbackslides {
-    grid-column: 2/5; }
+    grid-column: 2 / 5; }
   .feedback .img {
     background: #000;
     overflow: hidden;
@@ -3216,7 +3222,7 @@ img {
     position: relative;
     justify-self: center; }
     .feedback .img::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 100%;
@@ -3226,7 +3232,7 @@ img {
     .feedback .img:hover {
       cursor: pointer; }
       .feedback .img:hover::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -3277,7 +3283,7 @@ img {
   justify-self: center;
   padding-top: 20px; }
   .form input {
-    background-color: rgba(253, 81, 81, 0.5);
+    background-color: rgba(128, 128, 128, 0.5);
     border: none;
     color: #fff; }
     .form input::-webkit-input-placeholder {
@@ -3341,7 +3347,7 @@ img {
     text-shadow: 4px 4px 1px #000; }
 
 .footer {
-  grid-column: 1/3; }
+  grid-column: 1 / 3; }
   .footer span {
     color: #fff;
     padding-bottom: 0; }

@@ -9,14 +9,14 @@
   <title>GuitarForewer</title>
 </head>
 <body>
-  <div class="home"></div>
+  <div id="home"></div>
   <nav class="grid nav">
-    <div><a href="#home" class="active">Главная</a><a href="#aboutme">обо мне</a><a href="#feedback">отзывы</a><a href="#player">музыка</a><a href="#email">контакты</a></div>
+    <div><a href="#home">Главная</a><a href="#aboutme">обо мне</a><a href="#player">музыка</a><a href="#feedback">отзывы</a><a href="#email">контакты</a></div>
     <div><img src="img/logo.png" alt=""/></div>
   </nav>
   <div class="line">   </div>
   <nav class="grid navSmall">
-    <div class="cross"></div><a href="#home" class="active">Главная</a><a href="#aboutme">обо мне</a><a href="#feedback">отзывы</a><a href="#player">музыка</a><a href="#email">контакты</a>
+    <div class="cross"></div><a href="#home">Главная</a><a href="#aboutme">обо мне</a><a href="#player">музыка</a><a href="#feedback">отзывы</a><a href="#email">контакты</a>
   </nav>
   <section class="grid slides section">
     <div class="img"><img src="img/slider1.jpeg" alt=""/>
@@ -29,7 +29,7 @@
       <h1 data-animate="fadeInDownBig" class="hidden">SLIDE 3</h1>
     </div>
   </section>
-  <section style="background-image: url(img/paralax1.jpg)" class="grid about aboutme">
+  <section id="aboutme" style="background-image: url(img/paralax1.jpg)" class="grid about">
     <div class="img"><img src="img/guitarist.png" alt=""/></div>
     <div class="aboutMe grid">
       <h2>обо мне</h2>
@@ -43,7 +43,7 @@
         <div class="fa fa-linkedin"></div>
       </div>
     </div><a name="player"></a>
-    <div class="grid player">
+    <div id="player" class="grid player">
       <div class="jplayer_1"></div>
       <div class="player_container_1 grid">
         <div class="fa fa-play"></div>
@@ -148,7 +148,7 @@
       </div>
     </div>
   </section>
-  <section style="background-image: url(img/paralax2.jpg)" class="section feedback grid">
+  <section id="feedback" style="background-image: url(img/paralax2.jpg)" class="section feedback grid">
     <div class="line">
       <h2>отзывы</h2>
       <hr/>
@@ -189,7 +189,7 @@
       <textarea name="text" placeholder="text..."></textarea>
       <input type="button" name="" value="send"/>
     </div>
-    <div class="email grid">
+    <div id="email" class="email grid">
       <div class="fa fa-envelope"> </div><span class="name">kirill.lozovski@gmail.com</span>
       <div class="fa fa-phone"> </div><span class="phone">000-00-00</span>
       <div class="social">

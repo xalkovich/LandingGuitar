@@ -8,23 +8,23 @@ head
   link(rel="icon", href="img/favicon.ico")
   title GuitarForewer
 body
-  .home
+  #home
   nav.grid.nav
     div
-      a.active(href="#home") Главная
+      a(href="#home") Главная
       a(href="#aboutme") обо мне
-      a(href="#feedback") отзывы
       a(href="#player") музыка
+      a(href="#feedback") отзывы
       a(href="#email") контакты
     div
       img(src="img/logo.png", alt="")
   .line    
   nav.grid.navSmall
     .cross
-    a.active(href="#home") Главная
+    a(href="#home") Главная
     a(href="#aboutme") обо мне
-    a(href="#feedback") отзывы
     a(href="#player") музыка
+    a(href="#feedback") отзывы
     a(href="#email") контакты
     
   section.grid.slides.section
@@ -38,7 +38,7 @@ body
       img(src="img/slider3.jpeg", alt="")
       h1.hidden(data-animate="fadeInDownBig") SLIDE 3
 
-  section.grid.about.aboutme(style='background-image: url(img/paralax1.jpg)')
+  section.grid.about#aboutme(style='background-image: url(img/paralax1.jpg)')
     .img
       img(src="img/guitarist.png", alt="")
     .aboutMe.grid
@@ -56,7 +56,7 @@ body
     a(name="player")
     include player
 
-  section.section.feedback.grid(style='background-image: url(img/paralax2.jpg)')
+  section.section.feedback#feedback.grid(style='background-image: url(img/paralax2.jpg)')
     .line
       h2 отзывы
       hr
@@ -70,7 +70,7 @@ body
       textarea(name="text", placeholder="text...")
       input(type="button", name="", value="send")
       
-    .email.grid
+    .email#email.grid
       .fa.fa-envelope 
       span.name kirill.lozovski@gmail.com
       .fa.fa-phone 
