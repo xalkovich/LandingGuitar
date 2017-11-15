@@ -3056,6 +3056,11 @@ img {
 
 .navSmall {
   display: none; }
+  .navSmall .closeTop {
+    width: 100%;
+    margin-bottom: 15px; }
+  .navSmall .closeBottom {
+    width: 100%; }
 
 .nav {
   grid-template-columns: repeat(2, 1fr);
@@ -3128,7 +3133,6 @@ img {
     justify-items: center; }
     .about .aboutMe h2 {
       font-weight: bold;
-      margin-bottom: 0px;
       height: 40px;
       text-transform: uppercase; }
     .about .aboutMe hr {
@@ -3147,6 +3151,9 @@ img {
     grid-column: span 3;
     padding: 5% 10%;
     grid-gap: 5px; }
+    .about .player h2 {
+      padding-left: 42%;
+      color: #fff; }
     .about .player .player_container_1,
     .about .player .player_container_2,
     .about .player .player_container_3,
@@ -3180,7 +3187,7 @@ img {
       .about .player .player_container_4 .text,
       .about .player .player_container_5 .text,
       .about .player .player_container_6 .text {
-        color: #FFF;
+        color: #fff;
         text-align: center;
         margin-top: -5px;
         height: 20px; }
@@ -3357,8 +3364,6 @@ img {
 @media only screen and (max-width: 1280px) {
   .about .aboutMe {
     width: 50vw; }
-    .about .aboutMe h2 {
-      height: 60px; }
     .about .aboutMe p {
       font-size: 1em; }
   .about .img img {
@@ -3402,7 +3407,10 @@ img {
 @media only screen and (max-width: 768px) {
   .nav {
     grid-template-columns: minmax(-webkit-max-content, 1fr) 1fr;
-    grid-template-columns: minmax(max-content, 1fr) 1fr; }
+    grid-template-columns: minmax(max-content, 1fr) 1fr;
+    min-height: 10vh; }
+    .nav .logo {
+      display: none; }
     .nav div a {
       padding: 10px; }
   .slides {
@@ -3419,14 +3427,63 @@ img {
   .about .img img {
     max-width: 250px;
     margin-left: 10px; }
-  .about .player .player_container_1 .text,
-  .about .player .player_container_2 .text,
-  .about .player .player_container_3 .text,
-  .about .player .player_container_4 .text,
-  .about .player .player_container_5 .text,
-  .about .player .player_container_6 .text {
-    font-size: .8em;
-    margin-top: 0; }
+  .about .player #player {
+    text-align: center;
+    padding: 0; }
+  .about .player .player_container_1,
+  .about .player .player_container_2,
+  .about .player .player_container_3,
+  .about .player .player_container_4,
+  .about .player .player_container_5,
+  .about .player .player_container_6 {
+    grid-template-columns: 10px 10px -webkit-min-content 1fr;
+    grid-template-columns: 10px 10px min-content 1fr;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 5px; }
+    .about .player .player_container_1 .fa-play,
+    .about .player .player_container_2 .fa-play,
+    .about .player .player_container_3 .fa-play,
+    .about .player .player_container_4 .fa-play,
+    .about .player .player_container_5 .fa-play,
+    .about .player .player_container_6 .fa-play {
+      grid-column: 1;
+      grid-row: 1; }
+    .about .player .player_container_1 .fa-stop,
+    .about .player .player_container_2 .fa-stop,
+    .about .player .player_container_3 .fa-stop,
+    .about .player .player_container_4 .fa-stop,
+    .about .player .player_container_5 .fa-stop,
+    .about .player .player_container_6 .fa-stop {
+      grid-column: 2;
+      grid-row: 1; }
+    .about .player .player_container_1 .text,
+    .about .player .player_container_2 .text,
+    .about .player .player_container_3 .text,
+    .about .player .player_container_4 .text,
+    .about .player .player_container_5 .text,
+    .about .player .player_container_6 .text {
+      grid-column: 3/5;
+      grid-row: 1;
+      overflow: hidden; }
+    .about .player .player_container_1 .jp-progress,
+    .about .player .player_container_2 .jp-progress,
+    .about .player .player_container_3 .jp-progress,
+    .about .player .player_container_4 .jp-progress,
+    .about .player .player_container_5 .jp-progress,
+    .about .player .player_container_6 .jp-progress {
+      grid-column: span 4;
+      grid-row: 2;
+      width: 100%; }
+    .about .player .player_container_1 .jp-volume-controls,
+    .about .player .player_container_2 .jp-volume-controls,
+    .about .player .player_container_3 .jp-volume-controls,
+    .about .player .player_container_4 .jp-volume-controls,
+    .about .player .player_container_5 .jp-volume-controls,
+    .about .player .player_container_6 .jp-volume-controls {
+      grid-column: 4;
+      grid-row: 1;
+      display: none; }
   .about .aboutMe {
     padding-left: 5%; }
   .feedback .form {
@@ -3505,7 +3562,7 @@ img {
         .about .player .player_container_4 .text,
         .about .player .player_container_5 .text,
         .about .player .player_container_6 .text {
-          grid-column: 3;
+          grid-column: 3/5;
           grid-row: 1;
           overflow: hidden; }
         .about .player .player_container_1 .jp-progress,
@@ -3524,7 +3581,8 @@ img {
         .about .player .player_container_5 .jp-volume-controls,
         .about .player .player_container_6 .jp-volume-controls {
           grid-column: 4;
-          grid-row: 1; }
+          grid-row: 1;
+          display: none; }
   .form {
     max-width: 60vw; }
   .slides {
@@ -3587,7 +3645,7 @@ img {
     background: rgba(184, 184, 184, 0.5);
     width: 40vw;
     height: 100vh;
-    grid-template-rows: repeat(5, 45px);
+    grid-template-rows: 1fr repeat(4, 45px) 1fr;
     margin-bottom: -50vh;
     -ms-flex-line-pack: center;
         align-content: center;

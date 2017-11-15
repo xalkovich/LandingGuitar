@@ -16,18 +16,19 @@ body
       a(href="#player") музыка
       a(href="#feedback") отзывы
       a(href="#email") контакты
-    div
+    div.logo
       img(src="img/logo.png", alt="")
   .line    
   nav.grid.navSmall
-    .cross
-    a(href="#home") Главная
+    .closeTop
+    //- a(href="#home") Главная
     a(href="#aboutme") обо мне
     a(href="#player") музыка
     a(href="#feedback") отзывы
     a(href="#email") контакты
+    .closeBottom
     
-  section.grid.slides.section
+  section.grid.slides.section#slides
     .img
       img(src="img/slider1.jpeg", alt="")
       h1.hidden(data-animate="fadeInLeftBig") SLIDE 1
@@ -53,7 +54,7 @@ body
         .fa.fa-twitter
         .fa.fa-google-plus
         .fa.fa-linkedin
-    a(name="player")
+    
     include player
 
   section.section.feedback#feedback.grid(style='background-image: url(img/paralax2.jpg)')

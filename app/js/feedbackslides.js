@@ -3,10 +3,10 @@ $(document).ready(function () {
   $('.feedbackslides').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     useTransform: false,
-    pauseOnHover: false,
+    pauseOnHover: true,
     adaptiveHeight: true,
     arrows: false,
     responsive: [

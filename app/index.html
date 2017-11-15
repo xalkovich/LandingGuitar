@@ -12,13 +12,14 @@
   <div id="home"></div>
   <nav class="grid nav">
     <div><a href="#home">Главная</a><a href="#aboutme">обо мне</a><a href="#player">музыка</a><a href="#feedback">отзывы</a><a href="#email">контакты</a></div>
-    <div><img src="img/logo.png" alt=""/></div>
+    <div class="logo"><img src="img/logo.png" alt=""/></div>
   </nav>
   <div class="line">   </div>
   <nav class="grid navSmall">
-    <div class="cross"></div><a href="#home">Главная</a><a href="#aboutme">обо мне</a><a href="#player">музыка</a><a href="#feedback">отзывы</a><a href="#email">контакты</a>
+    <div class="closeTop"></div><a href="#aboutme">обо мне</a><a href="#player">музыка</a><a href="#feedback">отзывы</a><a href="#email">контакты</a>
+    <div class="closeBottom"></div>
   </nav>
-  <section class="grid slides section">
+  <section id="slides" class="grid slides section">
     <div class="img"><img src="img/slider1.jpeg" alt=""/>
       <h1 data-animate="fadeInLeftBig" class="hidden">SLIDE 1</h1>
     </div>
@@ -42,8 +43,9 @@
         <div class="fa fa-google-plus"></div>
         <div class="fa fa-linkedin"></div>
       </div>
-    </div><a name="player"></a>
-    <div id="player" class="grid player">
+    </div>
+    <div class="grid player">
+      <h2 id="player">Музыка</h2>
       <div class="jplayer_1"></div>
       <div class="player_container_1 grid">
         <div class="fa fa-play"></div>

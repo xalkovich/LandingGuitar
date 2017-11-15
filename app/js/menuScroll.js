@@ -5,14 +5,16 @@ $(document).ready(function() {
     var feedback = $("#feedback").offset().top - 200;
     var email = $("#email").offset().top - 800;
     var top = ($(document).scrollTop());
-    console.log(home);
-    console.log(aboutme);
-    console.log(top);
+    // console.log(home);
+    // console.log(aboutme);
+    // console.log(top);
     if (top >= home && top <= aboutme ) {
         $("a[href='#home']").addClass('active');
-    }
+    } 
+   
     if (top >= aboutme && top <= player) {
         $("a[href='#aboutme']").addClass('active');
+        
     }
     if (top >= player && top <= feedback) {
         $("a[href='#player']").addClass('active');
@@ -26,18 +28,20 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         var test = ($(document).scrollTop());
-        console.log(test);
     	if (test >= 100) {
     		$('.nav').addClass('navMenu');
     	}else{
     		$('.nav').removeClass('navMenu');
     	}
 		
-		if (top >= home && top <= aboutme ) {
+        if (test >= home && test <= aboutme ) {
         $("a[href='#home']").addClass('active');
+        } else {
+            $("a[href='#home']").removeClass('active');
     }
     if (test >= aboutme && test <= player) {
         $("a[href='#aboutme']").addClass('active');
+
     }else{
     	$("a[href='#aboutme']").removeClass('active');
     }
