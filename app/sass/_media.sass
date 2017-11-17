@@ -15,7 +15,7 @@
 			img
 				width: 300px
 	.slides
-		height: 68vh
+		height: 90vh
 		.img
 			img
 				height: auto
@@ -33,9 +33,9 @@
 			height: 35vh
 			justify-self: center
 			margin: 20px 0
-		::-webkit-scrollbar
-			width: 5px
-			background: rgba(255, 0, 0, 0.7)
+		// ::-webkit-scrollbar
+		// 	width: 5px
+		// 	background: rgba(255, 0, 0, 0.7)
 	.form
 		width: 50vw
 	.form input:nth-of-type(3)
@@ -43,6 +43,10 @@
 	.email
 		width: 50vw
 		justify-self: center
+@media only screen and (max-width: 1026px)
+	.slides
+		height: 75vh
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.about
@@ -54,6 +58,8 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.back
+		display: none
 	.nav
 		grid-template-columns: minmax(max-content, 1fr) 1fr
 		min-height: 10vh
@@ -76,6 +82,7 @@
 		justify-self: center
 	.about
 		.img
+			grid-column: span 2
 			img
 				max-width: 250px
 				margin-left: 10px
@@ -113,6 +120,8 @@
 					display: none
 		.aboutMe
 			padding-left: 5%
+			grid-column: span 2
+			width: 90vw
 	.feedback
 		.form
 			width: 70vw
@@ -128,6 +137,16 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.back
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -9999
+    opacity: 0
+    background: #000
+    transition: opacity 1000ms
+	.back
+		display: block
 
 	.about
 		grid-template-columns: 1fr

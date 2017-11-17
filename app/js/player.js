@@ -3,7 +3,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/1.mp3",
             
             volume: 100,
           });
@@ -33,7 +33,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/2.mp3",
             
             volume: 100,
           });
@@ -63,7 +63,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/3.mp3",
             
             volume: 100,
           });
@@ -93,7 +93,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/4.mp3",
             
             volume: 100,
           });
@@ -123,7 +123,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/5.mp3",
             
             volume: 100,
           });
@@ -153,7 +153,7 @@ $(document).ready(function(){
         ready: function () {
           $(this).jPlayer("setMedia", {
             title: "Big Buck Bunny",
-            m4a: "music/Делай что Ты хочешь во мне.mp3",
+            m4a: "music/6.mp3",
             
             volume: 100,
           });

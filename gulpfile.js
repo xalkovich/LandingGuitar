@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     del = require('del'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    ftp = require('vinyl-ftp');
 
 gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
@@ -40,6 +41,29 @@ gulp.task('build', ['clean', 'sass', 'scripts', 'csso', 'img'], function() {
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
         .pipe(gulp.dest('dist'));
+    
+});
+
+gulp.task('ftp', function () {
+
+    var conn = ftp.create({
+        host: 'rock.all4site.com.ua',
+        user: 'xalkall4site',
+        password: 'Kjpjdcrbq1',
+        parallel: 10,
+    });
+
+    var globs = [
+        'dist/**',
+        
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src(globs, { base: './dist/', buffer: false })
+        .pipe(conn.newer('/www/rock.all4site.com.ua')) // only upload newer files
+        .pipe(conn.dest('/www/rock.all4site.com.ua'));
 
 });
 
@@ -60,7 +84,7 @@ gulp.task('scripts', function() {
 
         ])
         .pipe(concat('main.min.js')) // Собираем их в кучу в новом файле
-        // .pipe(uglify()) // Сжимаем JS файл
+        .pipe(uglify()) // Сжимаем JS файл
         .on('error', notify.onError({
             message: "<%= error.message %>",
             title: "JS Error!"

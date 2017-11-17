@@ -5958,16 +5958,6 @@ html.fp-enabled,
     background: #F40909;
     height: 20px; }
 
-.back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  opacity: 0;
-  background: #000;
-  -webkit-transition: opacity 1000ms;
-  transition: opacity 1000ms; }
-
 img {
   background-position: center;
   background-size: cover; }
@@ -6039,8 +6029,7 @@ img {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  min-height: 100vh;
-  color: #000; }
+  min-height: 100vh; }
   .about a[name='aboutme'] {
     height: 0px; }
   .about .img {
@@ -6174,7 +6163,14 @@ img {
     line-height: 1.8;
     font-style: italic;
     width: 15vw;
-    justify-self: center; }
+    justify-self: center;
+    overflow: auto; }
+  .feedback ::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(88, 30, 30, 0.3); }
+  .feedback ::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: #f00; }
 
 .concert {
   grid-column: span 5; }
@@ -6290,7 +6286,7 @@ img {
   .about .img img {
     width: 300px; }
   .slides {
-    height: 68vh; }
+    height: 90vh; }
     .slides .img img {
       height: auto; }
   .feedback {
@@ -6306,9 +6302,6 @@ img {
       height: 35vh;
       justify-self: center;
       margin: 20px 0; }
-    .feedback ::-webkit-scrollbar {
-      width: 5px;
-      background: rgba(255, 0, 0, 0.7); }
   .form {
     width: 50vw; }
   .form input:nth-of-type(3) {
@@ -6316,6 +6309,10 @@ img {
   .email {
     width: 50vw;
     justify-self: center; } }
+
+@media only screen and (max-width: 1026px) {
+  .slides {
+    height: 75vh; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -6326,6 +6323,8 @@ img {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .back {
+    display: none; }
   .nav {
     grid-template-columns: minmax(-webkit-max-content, 1fr) 1fr;
     grid-template-columns: minmax(max-content, 1fr) 1fr;
@@ -6345,9 +6344,11 @@ img {
     grid-column: span 5;
     width: 100vw;
     justify-self: center; }
-  .about .img img {
-    max-width: 250px;
-    margin-left: 10px; }
+  .about .img {
+    grid-column: span 2; }
+    .about .img img {
+      max-width: 250px;
+      margin-left: 10px; }
   .about .player #player {
     text-align: center;
     padding: 0; }
@@ -6406,7 +6407,9 @@ img {
       grid-row: 1;
       display: none; }
   .about .aboutMe {
-    padding-left: 5%; }
+    padding-left: 5%;
+    grid-column: span 2;
+    width: 90vw; }
   .feedback .form {
     width: 70vw; }
   .feedback .email {
@@ -6421,6 +6424,17 @@ img {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+    opacity: 0;
+    background: #000;
+    -webkit-transition: opacity 1000ms;
+    transition: opacity 1000ms; }
+  .back {
+    display: block; }
   .about {
     grid-template-columns: 1fr;
     grid-template-rows: -webkit-min-content 1fr;
