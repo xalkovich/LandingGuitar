@@ -6128,6 +6128,9 @@ img {
       margin-top: 0;
       margin-bottom: 20px; }
   .feedback .feedbackslides {
+    overflow: hidden;
+    width: 100vw;
+    grid-column: span 2; }
   .feedback .img {
     background: #000;
     overflow: hidden;
