@@ -22,6 +22,8 @@ gulp.task('img', function() {
         .pipe(imagemin({ // Сжимаем их с наилучшими настройками
             interlaced: true,
             progressive: true,
+            quality: 'veryhigh',
+      			max: 10,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         }))
@@ -135,8 +137,9 @@ gulp.task('csso', function() { //Создание сжатого css
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browser Sync
         server: { // Определяем параметры сервера
-            baseDir: 'app' // Директория для сервера - app
+            baseDir: 'app',
         },
+        port:80,
         notify: false // Отключаем уведомления
     });
 });
