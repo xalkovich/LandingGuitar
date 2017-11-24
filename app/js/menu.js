@@ -14,7 +14,7 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $('.closeTop, .closeBottom').click(function () {
+    $('.closeTop, .closeBottom, .back').click(function () {
         $('.back').css('opacity','0');
         $('.back').css('z-index', '-9999');
         $('.about').css({ 'paddingLeft': '0vh' });

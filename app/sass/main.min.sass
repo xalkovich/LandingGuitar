@@ -178,7 +178,9 @@ img
       margin-top: 0
       margin-bottom: 20px
   .feedbackslides
-    grid-column: 2 / 5
+    overflow: hidden
+    width: 100vw
+    grid-column: span 2
   .img
     background: #000
     overflow: hidden
@@ -196,6 +198,7 @@ img
       height: 100%
       background: rgba(#000000, 0.6)
       transition: opacity 400ms
+      border-radius: 100%
 
     &:hover
       cursor: pointer
